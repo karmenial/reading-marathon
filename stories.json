@@ -3,7 +3,7 @@
     {
       "id": "story-1",
       "title": "The Magic Forest",
-      "titleAr": "الغابة السحرية",
+      "titleAr": "كرملة و بسبوسة",
       "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600",
       "category": "Adventure",
       "ageRange": "3-6",
@@ -17,7 +17,7 @@
     {
       "id": "story-2",
       "title": "The Brave Little Star",
-      "titleAr": "النجمة الشجاعة",
+      "titleAr": "حلا و النجمة الشجاعة",
       "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600",
       "category": "Fantasy",
       "ageRange": "4-8",
@@ -31,7 +31,7 @@
     {
       "id": "story-3",
       "title": "The Friendly Dragon",
-      "titleAr": "التنين الودود",
+      "titleAr": "حمزة و التنين الودود",
       "image": "https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=600",
       "category": "Fantasy",
       "ageRange": "5-9",
