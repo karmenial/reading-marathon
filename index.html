@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌙 Bed Stories for Kids 🌟</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Nunito:wght@400;700;900&amp;family=Cairo:wght@400;700;900&amp;display=swap" rel="stylesheet">
+</head>
+<body class="night-mode">
+  
+  <nav class="navbar">
+    <div class="logo">🌙 Bed Stories ✨</div>
+    <div class="nav-controls">
+      <button id="themeToggle" class="btn-icon" title="Toggle Theme">🌙</button>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="stars-container">
+      <span class="star">⭐</span>
+      <span class="star">✨</span>
+      <span class="star">⭐</span>
+      <span class="star">✨</span>
+      <span class="star">⭐</span>
+    </div>
+    <h1>🌟 Sweet Dreams Stories 🌟</h1>
+    <p>📚 Choose a story and enjoy bedtime fun! 🌙</p>
+    
+    <div class="filters-container">
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="🔍 Search for a story..." class="search-input">
+        <select id="categoryFilter" class="filter-select">
+          <option value="all">📂 All Categories</option>
+        </select>
+        <select id="ageFilter" class="filter-select">
+          <option value="all">👶 All Ages</option>
+          <option value="3-6">👶 3-6 years</option>
+          <option value="4-8"> 4-8 years</option>
+          <option value="5-9">👦 5-9 years</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="stories-container">
+    <div id="storiesGrid" class="stories-grid"></div>
+    <div id="noStories" class="no-stories hidden">
+      <div class="icon">📭</div>
+      <h2>No Stories Found</h2>
+      <p>Try changing your search or filters!</p>
+    </div>
+  </main>
+
+  <div id="storyModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeStoryModal()">✕</button>
+      
+      <div class="story-header">
+        <img id="storyImage" src="" alt="" class="story-image">
+        <h2 id="storyTitle"></h2>
+        <p id="storyTitleAr" class="story-title-ar"></p>
+        <div class="story-meta">
+          <span id="storyCategory" class="badge"></span>
+          <span id="storyAge" class="badge"></span>
+          <span id="storyDuration" class="badge"></span>
+        </div>
+      </div>
+
+      <div class="audio-controls">
+        <div class="voice-selector">
+          <label>🎙️ Voice:</label>
+          <select id="voiceSelect">
+            <option value="female">👩 Female</option>
+            <option value="male">👨 Male</option>
+            <option value="child">👶 Child</option>
+          </select>
+        </div>
+        
+        <div class="speed-control">
+          <label> Speed: <span id="rateValue">0.9</span></label>
+          <input type="range" id="rateSlider" min="0.5" max="1.5" step="0.1" value="0.9">
+        </div>
+        
+        <div class="pitch-control">
+          <label>🎵 Pitch: <span id="pitchValue">1.2</span></label>
+          <input type="range" id="pitchSlider" min="0.5" max="2.0" step="0.1" value="1.2">
+        </div>
+
+        <div class="playback-controls">
+          <button id="playBtn" class="btn btn-primary" onclick="togglePlay()">▶ Play</button>
+          <button id="slowBtn" class="btn btn-secondary" onclick="toggleSlowMode()">🐢 Slow Repeat</button>
+          <button id="stopBtn" class="btn btn-danger" onclick="stopReading()">⏹ Stop</button>
+        </div>
+      </div>
+
+      <div id="storyContent" class="story-content"></div>
+
+      <div class="arabic-section">
+        <button class="btn btn-arabic" onclick="toggleArabicTranslation()" id="arabicToggle">
+          📖 Show Arabic Translation
+        </button>
+        <div id="arabicText" class="arabic-text hidden"></div>
+        <button class="btn btn-arabic-speak hidden" id="arabicSpeakBtn" onclick="speakArabicTranslation()">
+          🔊 Listen in Arabic
+        </button>
+      </div>
+
+      <div class="tips">
+        💡 Click on any word to hear it pronounced!
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+
+</body></html>
