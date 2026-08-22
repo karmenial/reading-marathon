@@ -6,50 +6,7 @@ let currentUtterance = null;
 let words = [];
 let showArabicTranslation = false;
 
-const sampleStories = [
-  {
-    id: "story-1",
-    title: "The Magic Forest",
-    titleAr: "الغابة السحرية",
-    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600",
-    category: "Adventure",
-    ageRange: "3-6",
-    duration: "5 min",
-    content: "Once upon a time, in a magical forest, there lived a little rabbit named Benny. Benny loved to explore the forest and make new friends. One day, he found a glowing mushroom that could talk! The mushroom said, 'Hello Benny! I am Magic Mushroom. I can grant you one wish.' Benny thought carefully and wished for all the animals in the forest to be happy forever. The mushroom smiled and said, 'Your wish is granted!' From that day on, all the animals lived happily together in the magical forest.",
-    arabicContent: "كان يا ما كان في غابة سحرية، كان يعيش أرنب صغير اسمه بيني. كان بيني يحب استكشاف الغابة وتكوين أصدقاء جدد. في يوم من الأيام، وجد فطرًا متوهجًا يمكنه التحدث! قال الفطر: 'مرحبًا بيني! أنا الفطر السحري. يمكنني أن أمنحك أمنية واحدة.' فكر بيني بعناية وتمنى أن يكون جميع الحيوانات في الغابة سعداء إلى الأبد. ابتسم الفطر وقال: 'تمنيتك قد تحققت!' ومن ذلك اليوم، عاشت جميع الحيوانات بسعادة معًا في الغابة السحرية.",
-    voice: "child",
-    rate: 0.9,
-    pitch: 1.3
-  },
-  {
-    id: "story-2",
-    title: "The Brave Little Star",
-    titleAr: "النجمة الشجاعة",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600",
-    category: "Fantasy",
-    ageRange: "4-8",
-    duration: "7 min",
-    content: "High up in the night sky, there was a little star named Stella. She was smaller than all the other stars, but she had the biggest heart. One night, a little boy on Earth was crying because he was afraid of the dark. Stella saw him and decided to shine brighter than ever before. She twinkled and sparkled until the boy looked up and smiled. 'Look mommy, that little star is shining just for me!' From that night on, Stella knew that even the smallest light can make a big difference.",
-    arabicContent: "عاليًا في سماء الليل، كانت هناك نجمة صغيرة اسمها ستيلا. كانت أصغر من جميع النجوم الأخرى، لكن كان لديها أكبر قلب. في ليلة من الليالي، كان طفل صغير على الأرض يبكي لأنه خائف من الظلام. رأت ستيلا ذلك وقررت أن تلمع أكثر من أي وقت مضى. تألقت وتلألأت حتى نظر الطفل إليها وابتسم. 'انظري يا أمي، تلك النجمة الصغيرة تلمع من أجلي!' ومن تلك الليلة، عرفت ستيلا أن حتى أصغر ضوء يمكن أن يحدث فرقًا كبيرًا.",
-    voice: "female",
-    rate: 1.0,
-    pitch: 1.1
-  },
-  {
-    id: "story-3",
-    title: "The Friendly Dragon",
-    titleAr: "التنين الودود",
-    image: "https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=600",
-    category: "Fantasy",
-    ageRange: "5-9",
-    duration: "8 min",
-    content: "In a cave high on a mountain, there lived a dragon named Danny. All the villagers were scared of him, but Danny was actually very friendly. He loved to bake cookies and sing songs. One day, a little girl named Lily got lost in the mountains. She found Danny's cave and was scared at first. But Danny offered her a warm cookie and a cozy blanket. They became best friends, and Danny even flew her back home. The villagers learned that you should never judge someone by how they look.",
-    arabicContent: "في كهف عالي على جبل، كان يعيش تنين اسمه داني. كان جميع القرويين خائفين منه، لكن داني كان في الواقع ودودًا جدًا. كان يحب خبز الكعك وغناء الأغاني. في يوم من الأيام، ضلت فتاة صغيرة اسمها ليلي في الجبال. وجدت كهف داني وكانت خائفة في البداية. لكن داني قدم لها كعكة دافئة وبطانية مريحة. أصبحا أفضل أصدقاء، وحتى أن داني طار بها إلى المنزل. تعلم القرويون أنه يجب ألا تحكم على شخص من مظهره.",
-    voice: "male",
-    rate: 1.0,
-    pitch: 0.9
-  }
-];
+
 
 window.addEventListener('DOMContentLoaded', async () => {
   await loadStories();
@@ -64,30 +21,28 @@ async function loadStories() {
       const data = await response.json();
       stories = data.stories || [];
       console.log(`✅ تم تحميل ${stories.length} قصة من ملف JSON`);
-      if (stories.length === 0) {
-        stories = sampleStories;
-        console.log('📚 تم تحميل القصص النموذجية');
-      }
       return;
     }
   } catch (error) {
     console.warn('⚠️ فشل جلب ملف JSON...', error);
   }
   
+  // محاولة من localStorage
   try {
     const localData = localStorage.getItem('bed_stories_db');
     if (localData) {
       const data = JSON.parse(localData);
       stories = data.stories || [];
       console.log(`✅ تم تحميل ${stories.length} قصة من localStorage`);
-    } else {
-      stories = sampleStories;
-      console.log('📚 تم تحميل القصص النموذجية');
+      return;
     }
   } catch (e) {
     console.error('❌ خطأ:', e);
-    stories = sampleStories;
   }
+  
+  // إذا لم يوجد شيء
+  stories = [];
+  console.log('⚠️ لا توجد قصص محملة');
 }
 
 function setupEventListeners() {
