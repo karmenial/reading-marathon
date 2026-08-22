@@ -20,29 +20,66 @@ async function loadStories() {
     if (response.ok) {
       const data = await response.json();
       stories = data.stories || [];
+      
+      // ✅ كود جديد: تطبيق الإعدادات الافتراضية من ملف JSON
+      if (data.settings) {
+        const settings = data.settings;
+        
+        // 1. تعيين الصوت الافتراضي
+        if (settings.defaultVoice) {
+          document.getElementById('voiceSelect').value = settings.defaultVoice;
+        }
+        
+        // 2. تعيين السرعة الافتراضية
+        if (settings.defaultRate) {
+          document.getElementById('rateSlider').value = settings.defaultRate;
+          document.getElementById('rateValue').textContent = settings.defaultRate;
+        }
+        
+        // 3. تعيين النبرة الافتراضية
+        if (settings.defaultPitch) {
+          document.getElementById('pitchSlider').value = settings.defaultPitch;
+          document.getElementById('pitchValue').textContent = settings.defaultPitch;
+        }
+
+        // 4. تعيين الثيم الافتراضي (ليلي/نهاري)
+        if (settings.theme === 'day') {
+          document.body.classList.remove('night-mode');
+          document.body.classList.add('day-mode');
+          document.getElementById('themeToggle').textContent = '☀️';
+        } else {
+          document.body.classList.remove('day-mode');
+          document.body.classList.add('night-mode');
+          document.getElementById('themeToggle').textContent = '🌙';
+        }
+      }
+      // نهاية كود الإعدادات الافتراضية
+
       console.log(`✅ تم تحميل ${stories.length} قصة من ملف JSON`);
+      if (stories.length === 0) {
+        stories = sampleStories;
+        console.log('📚 تم تحميل القصص النموذجية');
+      }
       return;
     }
   } catch (error) {
     console.warn('⚠️ فشل جلب ملف JSON...', error);
   }
   
-  // محاولة من localStorage
   try {
     const localData = localStorage.getItem('bed_stories_db');
     if (localData) {
       const data = JSON.parse(localData);
       stories = data.stories || [];
       console.log(`✅ تم تحميل ${stories.length} قصة من localStorage`);
-      return;
+    } else {
+      stories = sampleStories;
+      console.log('📚 تم تحميل القصص النموذجية');
     }
   } catch (e) {
     console.error('❌ خطأ:', e);
+    stories = sampleStories;
   }
-  
-  // إذا لم يوجد شيء
-  stories = [];
-  console.log('⚠️ لا توجد قصص محملة');
 }
 
 function setupEventListeners() {
