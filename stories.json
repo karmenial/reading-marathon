@@ -106,8 +106,8 @@
   ],
   "settings": {
     "defaultVoice": "child",
-    "defaultRate": 0.9,
-    "defaultPitch": 1.2,
+    "defaultRate": 0.6,
+    "defaultPitch": 1.6,
     "theme": "night"
   }
 }
