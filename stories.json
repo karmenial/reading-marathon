@@ -97,17 +97,74 @@
       "voice": "child",
       "rate": 0.6,
       "pitch": 1.7
+    },
+    {
+      "id": "story-1788292777014",
+      "title": "My Mother",
+      "titleAr": "أُمي",
+      "image": "https://ik.imagekit.io/readingmarathon/My%20Mother?updatedAt=1787866987618",
+      "category": "Bedtime",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "My mother is the most important person in my life. She is kind, loving, and always cares about our family. Her smile makes our home warm and happy. No matter how busy she is, she always finds time to listen, help, guide, and support me when I need it. She isn't only my parent, but she is also my first teacher and my best friend. I love my mom so much.",
+      "arabicContent": "أمي هي أهم شخص في حياتي. إنها طيبة، ومُحبة، وتهتم دائماً بعائلتنا. ابتسامتها تجعل بيتنا دافئاً وسعيداً. مهما كانت مشغولة، فإنها تجد دائماً الوقت لتستمع إليّ، وتساعدني، وتوجهني، وتدعمني عندما أحتاج إليها. هي ليست مجرد والدتي فحسب، بل هي أيضاً معلمتي الأولى وصديقتي المفضلة. أحب أمي كثيراً.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.7
+    },
+    {
+      "id": "story-1788292957119",
+      "title": "My Bedroom",
+      "titleAr": "غرفة نومي",
+      "image": "https://ik.imagekit.io/readingmarathon/My%20Bedroom.png",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "My bedroom is my favourite room in my house. My bed is comfortable. There is a window with green curtains, and there is a green carpet on the floor. The curtains and the carpet match each other. There is a bookshelf on the wall beside the bed. I like reading before I go to bed. I clean my bedroom every day, so it is always tidy. I love my bedroom.",
+      "arabicContent": "غرفة نومي هي الغرفة المفضلة لدي في منزلي. سريري مريح. هناك نافذة بستائر خضراء، وهناك سجادة خضراء على الأرض. الستائر والسجادة متناسقتان معاً. توجد رفوف كتب على الحائط بجانب السرير. أحب القراءة قبل أن أذهب إلى النوم. أنظف غرفة نومي كل يوم، لذا فهي دائماً مرتبة. أنا أحب غرفة نومي.",
+      "voice": "child",
+      "rate": 0.7,
+      "pitch": 1.7
+    },
+    {
+      "id": "story-1788293215653",
+      "title": "My Family",
+      "titleAr": "عائلتي",
+      "image": "https://ik.imagekit.io/readingmarathon/My%20Family.jfif",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "This is my family: my dad, my mom, my sister, and my brother. My dad is a teacher and my mom is a nurse. We live in Cairo. My brother likes football; he goes to the club to play. My sister likes reading; she goes to the library to read. I like painting. We help with the housework and watch TV together every day. I love my family.",
+      "arabicContent": "هذه عائلتي: أبي، وأمي، وأختي، وأخي. أبي معلم، وأمي ممرضة. نحن نعيش في القاهرة. أخي يحب كرة القدم؛ فهو يذهب إلى النادي ليلعب. أختي تحب القراءة؛ فهي تذهب إلى المكتبة لتقرأ. وأنا أحب الرسم. نحن نساعد في الأعمال المنزلية ونشاهد التلفزيون معاً كل يوم. أنا أحب عائلتي.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.7
+    },
+    {
+      "id": "story-1788293383826",
+      "title": "Healthy Food",
+      "titleAr": "الطعَام الصّحي",
+      "image": "https://ik.imagekit.io/readingmarathon/Healthy%20Food.jfif",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "Many children like to eat sweets and candy, but they don't know that it is dangerous for their health. Sweets and candy aren't healthy food; they are unhealthy. Fresh food like fruits and vegetables is healthy. They are good for your body, brain, and heart. It is okay to eat a few sweets, but not too many.",
+      "arabicContent": "يحب العديد من الأطفال أكل الحلويات والسكاكر، لكنهم لا يعرفون أنها خطيرة على صحتهم. الحلويات والسكاكر ليست طعاماً صحياً؛ بل هي غير صحية. الطعام الطازج مثل الفواكه والخضروات هو الطعام الصحي، فهو مفيد لجسدك وعقلك وقلبك. لا بأس بأكل القليل من الحلويات، ولكن ليس الكثير منها.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.7
     }
   ],
   "categories": [
     "Adventure",
     "Fantasy",
-    "Educational"
+    "Educational",
+    "Bedtime"
   ],
   "settings": {
     "defaultVoice": "child",
-    "defaultRate": 0.6,
-    "defaultPitch": 1.6,
+    "defaultRate": 0.9,
+    "defaultPitch": 1.2,
     "theme": "night"
   }
 }
