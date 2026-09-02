@@ -153,6 +153,62 @@
       "voice": "child",
       "rate": 0.6,
       "pitch": 1.7
+    },
+    {
+      "id": "story-1788383266337",
+      "title": "My Good Habits",
+      "titleAr": "عاداتي الجيدة",
+      "image": "https://ik.imagekit.io/readingmarathon/My%20Good%20Habits.jfif",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "I always get up early; it makes me start my day fresh. I brush my teeth because it keeps me healthy. I keep my room clean, and I study every day. I eat healthy food and do sports three times a week. I am always kind and helpful.",
+      "arabicContent": "أنا أستيقظ دائماً مبكراً؛ فهذا يجعلني أبدأ يومي بنشاط (بإنتعاش). أنظف أسناني بالفرشاة لأن ذلك يحافظ على صحتي. أحافظ على نظافة غرفتي، وأدرس كل يوم. آكل طعاماً صحياً وأمارس الرياضة ثلاث مرات في الأسبوع. أنا دائماً لطيف ومُساعد للآخرين.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.7
+    },
+    {
+      "id": "story-1788383467038",
+      "title": "Social Media",
+      "titleAr": "وسائل التواصل الاجتماعي",
+      "image": "https://ik.imagekit.io/readingmarathon/Social%20media.jfif",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "Social media plays an important role in our life, but is it good or bad\n\nSocial media is sometimes good and sometimes bad. It is good because it helps us learn new things, connect faster, and learn about different cultures. But on the other hand, it is sometimes bad because it can waste our time, give us headaches, and cause eye problems.\n\nTo stay safe, you should limit your screen time and not make friends with people you don't know.",
+      "arabicContent": "تلعب وسائل التواصل الاجتماعي دوراً مهماً في حياتنا، ولكن هل هي جيدة أم سيئة؟\n\nوسائل التواصل الاجتماعي تكون جيدة في بعض الأحيان وسيئة في أحيان أخرى. هي جيدة لأنها تساعدنا على تعلم أشياء جديدة، والتواصل بشكل أسرع، والتعرف على ثقافات مختلفة. ولكن من ناحية أخرى، هي سيئة أحياناً لأنها قد تضيع وقتنا، وتسبب لنا الصداع ومشاكل في العين.\n\nوللبقاء في أمان، يجب عليك الحد من وقت استخدام الشاشة وعدم تكوين صداقات مع أشخاص لا تعرفهم.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.6
+    },
+    {
+      "id": "story-1788383653499",
+      "title": "Heroes in Our Lives",
+      "titleAr": "الأبطال في حياتنا",
+      "image": "https://ik.imagekit.io/readingmarathon/Heroes%20in%20Our%20Lives.jfif",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "In our lives, there are a lot of heroes. Doctors work in hospitals; they give medicine to sick people. Nurses help doctors. Teachers work at schools; they help students understand lessons. Firefighters stop fires and save people from danger. Police officers protect people and keep the city safe. Garbage collectors collect garbage and keep our streets clean. All of them are heroes. Think: what would happen if they were not in our lives? Tell me, who is your hero",
+      "arabicContent": "في حياتنا، هناك الكثير من الأبطال. الأطباء يعملون في المستشفيات؛ وهم يعطون الدواء للمرضى. الممرضات يساعدن الأطباء. المعلمون يعملون في المدارس؛ وهم يساعدون الطلاب على فهم الدروس. رجال الإطفاء يطفئون الحرائق وينقذون الناس من الخطر. ضباط الشرطة يحمون الناس ويحافظون على أمان المدينة. جامعو القمامة يجمعون القمامة ويحافظون على نظافة شوارعنا. جميعهم أبطال. فكر: ماذا كان سيحدث لو لم يكونوا في حياتنا؟ أخبرني، من هو بطلُك؟",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.7
+    },
+    {
+      "id": "story-1788383846332",
+      "title": "My Cat",
+      "titleAr": "قطتي",
+      "image": "https://ik.imagekit.io/readingmarathon/My%20Cat.png",
+      "category": "Educational",
+      "ageRange": "5-9",
+      "duration": "4 min",
+      "content": "I have a friendly cat, and her name is Mini. Mini has green eyes and soft fur. She likes to eat fish and drink milk. She always plays with my toys and runs around the house. When she gets tired, she likes to sleep on my bed. Mini is super cute, and I love playing with her every day. She is my best pet.",
+      "arabicContent": "لدي قطة لطيفة (ودودة) واسمها ميني. ميني لديها عينان خضراوان وفراء ناعم. هي تحب أكل السمك وشرب الحليب. تلعب دائماً بألعابي وتجري في جميع أنحاء المنزل. وعندما تتعب، تحب النوم على سريري. ميني ظريفة جداً، وأنا أحب اللعب معها كل يوم. إنها حيواني الأليف المفضل.",
+      "voice": "child",
+      "rate": 0.6,
+      "pitch": 1.6
     }
   ],
   "categories": [
